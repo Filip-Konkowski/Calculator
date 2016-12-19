@@ -27,13 +27,17 @@ class App
             ['result' => '4', 'equation' => '2+2'],
             ['result' => '20', 'equation' => '22 - 2'],
             ['result' => '44', 'equation' => '22+22'],
-            ['result' => '1', 'equation' => '2/2'],
+            ['result' => '1', 'equation' => '2:2'],
             ['result' => '0', 'equation' => '0*2'],
             ['result' => '55', 'equation' => '22+22+11'],
             ['result' => '33', 'equation' => '22+22-11'],
             ['result' => '24', 'equation' => '11+12-13+14'],
             ['result' => '30', 'equation' => '11+12-13+14+6'],
             ['result' => '33', 'equation' => '11+12-13+14+6+3'],
+            ['result' => '33', 'equation' => '11+12-13+14+6+3'],
+            ['result' => '5', 'equation' => '10:5+1*3'],
+            ['result' => '20', 'equation' => '10+10:5+1*3+5'],
+            ['result' => '10', 'equation' => '10-10:5-1*3+5'],
 
         ];
 

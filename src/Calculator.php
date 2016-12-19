@@ -10,11 +10,13 @@ include_once(__FILE__ . 'Operation.php');
 
 class Calculator
 {
+    /**
+     * @param $string
+     * @return integer
+     */
     public function calculation($string)
     {
-        $numbers = [];
-        $operations = [];
-        
+        $string = trim($string);
         $exploded = preg_split('@(\+|\-|\*|\:)@', $string, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
         
         foreach ($exploded as $key => $element) {
@@ -27,7 +29,7 @@ class Calculator
                 $exploded[$key + 1] = $result;
             }
         }
-        
+        ksort($exploded);
         $afterFirstIteration = array_values($exploded);
         
         foreach ($afterFirstIteration as $key => $element) {
@@ -41,9 +43,6 @@ class Calculator
             }
         }
         $finalResult = array_values($afterFirstIteration);
-        
         return $finalResult[0];
-        
     }
-    
 }

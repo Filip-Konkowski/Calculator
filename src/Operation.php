@@ -22,7 +22,9 @@ class Operation
         $this->operator = $operator;
     }
     
-
+    /**
+     * @return bool|float|int
+     */
     public function resultOfOperation()
     {
         switch($this->operator) {
@@ -39,6 +41,8 @@ class Operation
                 return $this->firstNumber / $this->secondNumber;
                 break;
         }
+        
+        return false;
             
     }
 }

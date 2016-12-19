@@ -22,5 +22,23 @@ class Operation
         $this->operator = $operator;
     }
     
-    public function resultOfOperation() {}
+
+    public function resultOfOperation()
+    {
+        switch($this->operator) {
+            case ($this->operator === '+'):
+                return $this->firstNumber + $this->secondNumber;
+                break;
+            case ($this->operator === '-'):
+                return $this->firstNumber - $this->secondNumber;
+                break;
+            case ($this->operator === '*'):
+                return $this->firstNumber * $this->secondNumber;
+                break;
+            case ($this->operator === ':'):
+                return $this->firstNumber / $this->secondNumber;
+                break;
+        }
+            
+    }
 }
